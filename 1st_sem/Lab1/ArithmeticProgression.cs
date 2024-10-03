@@ -1,28 +1,31 @@
+using System.Text;
+
+namespace Lab1 {
 class ArithmeticProgression
 {
-  private int firstElement;
-  private int difference;
-  private int amount;
+  private double firstElement;
+  private double difference;
+  private double amount;
 
-  public int FirstElement
+  public double FirstElement
   {
     get { return firstElement; }
     set { firstElement = value; }
   }
 
-  public int Difference
+  public double Difference
   {
     get { return difference; }
     set { difference = value; }
   }
 
-  public int Amount
+  public double Amount
   {
     get { return amount; }
     set { amount = value; }
   }
 
-  public ArithmeticProgression(int firstElement, int difference, int amount)
+  public ArithmeticProgression(double firstElement, double difference, double amount)
   {
     this.firstElement = firstElement;
     this.difference = difference;
@@ -36,7 +39,7 @@ class ArithmeticProgression
     this.amount = 0;
   }
 
-  public int this[int index]
+  public double this[int index]
   {
     get
     {
@@ -44,9 +47,47 @@ class ArithmeticProgression
     }
   }
 
-  public int SumOfSequence()
+  public override string ToString()
+{
+    StringBuilder progression = new StringBuilder();
+
+    for (int i = 0; i < amount; i++)
+    {
+        progression.Append(this[i]);
+
+        if (i < amount - 1)
+        {
+            progression.Append(", ");
+        }
+    }
+
+    return $"Arithmetic Progression: {progression}";
+}
+
+
+  public void Input()
+  {
+    Console.WriteLine("Enter the first element of the arithmetic progression:");
+    FirstElement = double.Parse(Console.ReadLine());
+
+    Console.WriteLine("Enter the difference:");
+    Difference = double.Parse(Console.ReadLine());
+
+    Console.WriteLine("Enter the amount of elements:");
+    Amount = double.Parse(Console.ReadLine());
+  }
+
+  public void Output()
+  {
+    Console.WriteLine(ToString());
+    Console.WriteLine(SumOfSequence());
+  }
+
+
+  public double SumOfSequence()
   {
     return (amount * (2 * firstElement + (amount - 1) * difference)) / 2;
   }
 
+}
 }
