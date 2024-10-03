@@ -27,12 +27,12 @@ namespace Lab1
 
     public override string ToString()
     {
-      return $"Коло з радіусом: {radius}";
+      return $"Circle with a radius: {radius}";
     }
 
     public void Input()
     {
-      Console.Write("Введіть радіус кола: ");
+      Console.Write("Enter the radius of the circle: ");
       radius = Convert.ToDouble(Console.ReadLine());
     }
 
