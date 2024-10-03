@@ -14,6 +14,9 @@ namespace Lab1
       ap2.Output();
       Console.WriteLine(ap2.SumOfSequence());
 
+
+
+
     }
   }
 }
