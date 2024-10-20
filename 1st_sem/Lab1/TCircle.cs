@@ -41,7 +41,7 @@ namespace Lab1
       Console.WriteLine(ToString());
     }
 
-    public double GetArea()
+    public virtual double GetArea()
     {
       return Math.PI * radius * radius;
     }

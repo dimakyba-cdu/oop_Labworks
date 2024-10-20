@@ -24,7 +24,7 @@ namespace Lab1
       return $"Sphere with a radius: {Radius}, volume: {GetVolume()}";
     }
 
-    public double GetArea()
+    public override double GetArea()
     {
       return 4 * Math.PI * Math.Pow(Radius, 2);
     }
