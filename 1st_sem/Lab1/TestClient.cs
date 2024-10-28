@@ -10,12 +10,12 @@ namespace Lab1
       const int radius = 5;
       const int angle = 90;
 
-      byte choice = 0;
+      int choice;
       Console.WriteLine("1. Arithmetic Progression");
       Console.WriteLine("2. Circle");
       Console.WriteLine("3. Sphere");
       Console.WriteLine("Enter your choice: ");
-      choice = byte.Parse(Console.ReadLine());
+      choice = int.Parse(Console.ReadLine());
 
       switch (choice)
       {
