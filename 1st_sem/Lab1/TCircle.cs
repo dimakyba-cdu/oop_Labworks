@@ -22,7 +22,13 @@ namespace Lab1
     public double Radius
     {
       get { return radius; }
-      set { radius = value; }
+      set
+      {
+        if (value >= 0)
+          radius = value;
+        else
+          throw new ArgumentOutOfRangeException(nameof(value), "Radius cannot be negative");
+      }
     }
 
     public override string ToString()

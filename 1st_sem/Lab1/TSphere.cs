@@ -28,6 +28,35 @@ namespace Lab1
     {
       return 4 * Math.PI * Math.Pow(Radius, 2);
     }
-  }
 
+    public int CompareTo(TSphere other)
+    {
+      if (this.GetVolume() > other.GetVolume())
+        return 1;
+      else if (this.GetVolume() < other.GetVolume())
+        return -1;
+      else
+        return 0;
+    }
+
+    public static TSphere operator +(TSphere a, TSphere b)
+    {
+      return new TSphere(a.Radius + b.Radius);
+    }
+
+    public static TSphere operator -(TSphere a, TSphere b)
+    {
+      return new TSphere(Math.Abs(a.Radius - b.Radius));
+    }
+
+    public static TSphere operator *(TSphere a, double scalar)
+    {
+      return new TSphere(a.Radius * scalar);
+    }
+
+    public static TSphere operator *(double scalar, TSphere a)
+    {
+      return new TSphere(a.Radius * scalar);
+    }
+  }
 }
