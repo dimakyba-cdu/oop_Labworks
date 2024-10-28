@@ -91,5 +91,19 @@ namespace Lab1
     {
       return new TCircle(a.radius * scalar);
     }
+
+    public override bool Equals(object obj)
+    {
+      if (obj == null || GetType() != obj.GetType())
+        return false;
+
+      TCircle other = (TCircle)obj;
+      return radius == other.radius;
+    }
+
+    public override int GetHashCode()
+    {
+      return radius.GetHashCode();
+    }
   }
 }

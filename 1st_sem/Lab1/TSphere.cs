@@ -58,5 +58,19 @@ namespace Lab1
     {
       return new TSphere(a.Radius * scalar);
     }
+
+    public override bool Equals(object obj)
+    {
+      if (obj == null || GetType() != obj.GetType())
+        return false;
+
+      TSphere other = (TSphere)obj;
+      return Radius == other.Radius;
+    }
+
+    public override int GetHashCode()
+    {
+      return Radius.GetHashCode();
+    }
   }
 }
