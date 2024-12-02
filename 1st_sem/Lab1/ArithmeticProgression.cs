@@ -6,7 +6,7 @@ namespace Lab1
   {
     private double firstElement;
     private double difference;
-    private double amount;
+    private uint amount;
 
     public double FirstElement
     {
@@ -20,13 +20,13 @@ namespace Lab1
       set { difference = value; }
     }
 
-    public double Amount
+    public uint Amount
     {
       get { return amount; }
       set { amount = value; }
     }
 
-    public ArithmeticProgression(double firstElement, double difference, double amount)
+    public ArithmeticProgression(double firstElement, double difference, uint amount)
     {
       this.firstElement = firstElement;
       this.difference = difference;
@@ -89,7 +89,7 @@ namespace Lab1
       Difference = double.Parse(Console.ReadLine());
 
       Console.WriteLine("Enter the amount of elements:");
-      Amount = double.Parse(Console.ReadLine());
+      Amount = uint.Parse(Console.ReadLine());
     }
 
     public void Output()

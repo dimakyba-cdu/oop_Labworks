@@ -11,7 +11,10 @@ namespace Lab1
 
     public TCircle(double radius)
     {
-      this.radius = radius;
+       if (radius >= 0)
+          this.radius = radius;
+        else
+          throw new ArgumentOutOfRangeException(nameof(radius), "Radius cannot be negative");
     }
 
     public TCircle(TCircle other)
@@ -39,7 +42,7 @@ namespace Lab1
     public void Input()
     {
       Console.Write("Enter the radius of the circle: ");
-      radius = Convert.ToDouble(Console.ReadLine());
+      Radius = Convert.ToDouble(Console.ReadLine());
     }
 
     public void Output()

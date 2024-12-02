@@ -48,6 +48,11 @@ namespace Lab1
             Console.WriteLine("-------------");
             break;
           case 2:
+            TCircle circle5435 = new();
+            circle5435.Input();
+            circle5435.Output();
+
+            Console.WriteLine(circle5435.GetArea());
             Console.WriteLine();
             Console.WriteLine("Exploring circle:");
             TCircle circle = new(radius);
