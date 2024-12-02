@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("interfaces_as_inheritance")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c84a4069680c69aa96355c87ffe8be09de44615e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b8f42f81af04e69a84f3e307a1b0f1e90c559d35")]
 [assembly: System.Reflection.AssemblyProductAttribute("interfaces_as_inheritance")]
 [assembly: System.Reflection.AssemblyTitleAttribute("interfaces_as_inheritance")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
