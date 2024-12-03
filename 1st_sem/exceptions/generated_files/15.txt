@@ -1,2 +1,0 @@
-not_a_number
-another_non_number
