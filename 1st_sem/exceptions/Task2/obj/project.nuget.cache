@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "4ZCQE7WM7pI=",
+  "dgSpecHash": "plws3ScRo58=",
   "success": true,
   "projectFilePath": "D:\\uni\\2kurs\\oop_Labworks\\1st_sem\\exceptions\\Task2\\Task2.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\userr\\.nuget\\packages\\microsoft.win32.systemevents\\9.0.0\\microsoft.win32.systemevents.9.0.0.nupkg.sha512",
+    "C:\\Users\\userr\\.nuget\\packages\\system.drawing.common\\9.0.0\\system.drawing.common.9.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
