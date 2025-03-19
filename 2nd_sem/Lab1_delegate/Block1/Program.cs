@@ -1,6 +1,6 @@
 ﻿namespace TimerLab
 {
-  internal class Program
+  public class Program
   {
     public static void CustomMethod1()
     {
@@ -12,7 +12,7 @@
 
     }
 
-    public static void Main()
+    static void Main()
     {
       Timer timer1 = new(CustomMethod1, 1000);
       Timer timer2 = new(CustomMethod2, 500);

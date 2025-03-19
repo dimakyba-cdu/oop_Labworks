@@ -2,7 +2,7 @@
 
 internal class Program
 {
-  public delegate double UnitOfSeries(int n);
+  delegate double UnitOfSeries(int n);
 
   static void Main(string[] args)
   {
