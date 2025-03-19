@@ -1,0 +1,15 @@
+D:\Desktop\uni\2kurs\oop_labworks\2nd_sem\Lab1_delegate\Block1\bin\Debug\net9.0\Block1.exe
+D:\Desktop\uni\2kurs\oop_labworks\2nd_sem\Lab1_delegate\Block1\bin\Debug\net9.0\Block1.deps.json
+D:\Desktop\uni\2kurs\oop_labworks\2nd_sem\Lab1_delegate\Block1\bin\Debug\net9.0\Block1.runtimeconfig.json
+D:\Desktop\uni\2kurs\oop_labworks\2nd_sem\Lab1_delegate\Block1\bin\Debug\net9.0\Block1.dll
+D:\Desktop\uni\2kurs\oop_labworks\2nd_sem\Lab1_delegate\Block1\bin\Debug\net9.0\Block1.pdb
+D:\Desktop\uni\2kurs\oop_labworks\2nd_sem\Lab1_delegate\Block1\obj\Debug\net9.0\Block1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desktop\uni\2kurs\oop_labworks\2nd_sem\Lab1_delegate\Block1\obj\Debug\net9.0\Block1.AssemblyInfoInputs.cache
+D:\Desktop\uni\2kurs\oop_labworks\2nd_sem\Lab1_delegate\Block1\obj\Debug\net9.0\Block1.AssemblyInfo.cs
+D:\Desktop\uni\2kurs\oop_labworks\2nd_sem\Lab1_delegate\Block1\obj\Debug\net9.0\Block1.csproj.CoreCompileInputs.cache
+D:\Desktop\uni\2kurs\oop_labworks\2nd_sem\Lab1_delegate\Block1\obj\Debug\net9.0\Block1.sourcelink.json
+D:\Desktop\uni\2kurs\oop_labworks\2nd_sem\Lab1_delegate\Block1\obj\Debug\net9.0\Block1.dll
+D:\Desktop\uni\2kurs\oop_labworks\2nd_sem\Lab1_delegate\Block1\obj\Debug\net9.0\refint\Block1.dll
+D:\Desktop\uni\2kurs\oop_labworks\2nd_sem\Lab1_delegate\Block1\obj\Debug\net9.0\Block1.pdb
+D:\Desktop\uni\2kurs\oop_labworks\2nd_sem\Lab1_delegate\Block1\obj\Debug\net9.0\Block1.genruntimeconfig.cache
+D:\Desktop\uni\2kurs\oop_labworks\2nd_sem\Lab1_delegate\Block1\obj\Debug\net9.0\ref\Block1.dll
