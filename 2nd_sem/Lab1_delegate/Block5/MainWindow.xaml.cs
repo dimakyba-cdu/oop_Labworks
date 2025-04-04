@@ -42,7 +42,7 @@ public partial class MainWindow : Window
 
     private void Button_Click_Hello(object sender, RoutedEventArgs e)
     {
-        MessageBox.Show("Hello from Dima and Lena ;)", "Alarm alarm", MessageBoxButton.OK, MessageBoxImage.Warning, MessageBoxResult.OK, MessageBoxOptions.DefaultDesktopOnly);
+        MessageBox.Show("Hello ;)", "Alarm alarm", MessageBoxButton.OK, MessageBoxImage.Warning, MessageBoxResult.OK, MessageBoxOptions.DefaultDesktopOnly);
     }
 
     private void CheckBox_Click(object sender, RoutedEventArgs e)

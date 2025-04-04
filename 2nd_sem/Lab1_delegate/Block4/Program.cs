@@ -2,18 +2,13 @@
 
 internal class Program
 {
-  delegate double F(double x);
   static void Main(string[] args)
   {
-    F[] funcs = new F[3];
+    Func<double, double>[] funcs = new Func<double, double>[3];
 
-    F squareRootAbs = x => Math.Sqrt(Math.Abs(x));
-    F cube = x => Math.Pow(x, 3) - 1;
-    F sine = x => Math.Sin(x * Math.PI / 2);
-
-    funcs[0] = squareRootAbs;
-    funcs[1] = cube;
-    funcs[2] = sine;
+    funcs[0] = x => Math.Sqrt(Math.Abs(x));
+    funcs[1] = x => Math.Pow(x, 3) - 1;
+    funcs[2] = x => Math.Sin(x * Math.PI / 2);
 
     Console.WriteLine("Format of input: \"F X\" where F is the chosen function and X is the value that we pass to the function:");
     Console.WriteLine("Supported functions: 0 - sqrt(abs(x))");
@@ -29,10 +24,9 @@ internal class Program
         double choice = input[0];
         double value = input[1];
 
-        F targetFunc = funcs[(int)choice];
+        Func<double, double> targetFunc = funcs[(int)choice];
 
         Console.WriteLine(targetFunc(value));
-
       }
       catch
       {
@@ -40,6 +34,5 @@ internal class Program
         break;
       }
     }
-
   }
 }
