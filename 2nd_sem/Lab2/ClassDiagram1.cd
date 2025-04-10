@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Lab2.App" Collapsed="true">
+    <Position X="24.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab2.BackspaceCommand" Collapsed="true">
+    <Position X="11" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BackspaceCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab2.CalculateCommand" Collapsed="true">
+    <Position X="17.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAABAAQAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>CalculateCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab2.CalculatorCommand" Collapsed="true">
+    <Position X="15.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAQAAABAYAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>CalculatorCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Lab2.CalculatorEngine" Collapsed="true">
+    <Position X="26.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAAAAAEAAAAAFAEEAAAAISACIAAAAAAIAADACAA=</HashCode>
+      <FileName>CalculatorEngine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab2.ClearCommand" Collapsed="true">
+    <Position X="13.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ClearCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab2.CommandManager" Collapsed="true">
+    <Position X="24.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAABAAAAAAAAAADAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommandManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab2.DecimalCommand" Collapsed="true">
+    <Position X="20" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DecimalCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab2.InputCommand" Collapsed="true">
+    <Position X="15.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InputCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab2.MainWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="26.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ECAIAAIhUAAAAAIAAIABAAAQAAACAAAAAAQBAAAAgAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Lab2.OperatorCommand" Collapsed="true">
+    <Position X="22.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OperatorCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab2.ScientificCommand" Collapsed="true">
+    <Position X="8.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>ScientificCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Lab2.ICommand" Collapsed="true">
+    <Position X="24.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IComand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

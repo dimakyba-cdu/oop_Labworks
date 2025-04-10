@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "D:\\Desktop\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1B00A159-F0B3-75BC-79AF-57F45C378AF5}|Lab2.csproj|d:\\desktop\\uni\\2kurs\\oop_labworks\\2nd_sem\\lab2\\classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|",
-      "RelativeMoniker": "D:0:0:{1B00A159-F0B3-75BC-79AF-57F45C378AF5}|Lab2.csproj|solutionrelative:classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1B00A159-F0B3-75BC-79AF-57F45C378AF5}|Lab2.csproj|d:\\desktop\\uni\\2kurs\\oop_labworks\\2nd_sem\\lab2\\calculatorcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1B00A159-F0B3-75BC-79AF-57F45C378AF5}|Lab2.csproj|solutionrelative:calculatorcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -43,18 +39,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ClassDiagram1.cd",
-              "DocumentMoniker": "D:\\Desktop\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\ClassDiagram1.cd",
-              "RelativeDocumentMoniker": "ClassDiagram1.cd",
-              "ToolTip": "D:\\Desktop\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\ClassDiagram1.cd",
-              "RelativeToolTip": "ClassDiagram1.cd",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000463|",
-              "WhenOpened": "2025-04-10T07:14:16.109Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "CalculatorCommand.cs",
               "DocumentMoniker": "D:\\Desktop\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\CalculatorCommand.cs",
               "RelativeDocumentMoniker": "CalculatorCommand.cs",
@@ -67,7 +51,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "CalculatorEngine.cs",
               "DocumentMoniker": "D:\\Desktop\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\CalculatorEngine.cs",
               "RelativeDocumentMoniker": "CalculatorEngine.cs",
@@ -80,7 +64,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "DecimalCommand.cs",
               "DocumentMoniker": "D:\\Desktop\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\DecimalCommand.cs",
               "RelativeDocumentMoniker": "DecimalCommand.cs",
@@ -93,7 +77,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "ClearCommand.cs",
               "DocumentMoniker": "D:\\Desktop\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\ClearCommand.cs",
               "RelativeDocumentMoniker": "ClearCommand.cs",
@@ -106,7 +90,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "CommandManager.cs",
               "DocumentMoniker": "D:\\Desktop\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\CommandManager.cs",
               "RelativeDocumentMoniker": "CommandManager.cs",
@@ -119,7 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "IComand.cs",
               "DocumentMoniker": "D:\\Desktop\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\IComand.cs",
               "RelativeDocumentMoniker": "IComand.cs",
@@ -129,10 +113,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-10T06:52:19.482Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }
