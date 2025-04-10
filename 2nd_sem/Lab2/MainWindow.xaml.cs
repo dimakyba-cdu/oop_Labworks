@@ -1,16 +1,13 @@
-using System;
-using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using System.Windows.Media;
 
 namespace Lab2
 {
   public partial class MainWindow : Window
   {
-    private readonly CalculatorEngine calculator;
-    private readonly CommandManager commandManager;
+    private CalculatorEngine calculator;
+    private CommandManager commandManager;
     private bool isScientificMode = false;
 
     public MainWindow()
@@ -90,9 +87,13 @@ namespace Lab2
           break;
         case Key.Z:
           if ((Keyboard.Modifiers & (ModifierKeys.Control | ModifierKeys.Shift)) == (ModifierKeys.Control | ModifierKeys.Shift))
+          {
             Redo_Click(null, null);
+          }
           else if ((Keyboard.Modifiers & ModifierKeys.Control) == ModifierKeys.Control)
+          {
             Undo_Click(null, null);
+          }
           break;
       }
     }
@@ -106,7 +107,9 @@ namespace Lab2
     private void Decimal_Click(object sender, RoutedEventArgs e)
     {
       if (calculator.IsInErrorState)
+      {
         calculator.ResetErrorState();
+      }
 
       var command = new DecimalCommand(calculator);
       commandManager.ExecuteCommand(command);
@@ -263,285 +266,4 @@ namespace Lab2
       }
     }
   }
-
-  // public class CalculatorEngine
-  // {
-  //     public string DisplayValue { get; private set; } = "0";
-  //     public string CalculationExpression { get; private set; } = "";
-  //     public bool IsNewOperation { get; private set; } = true;
-  //     public bool IsInErrorState { get; private set; } = false;
-
-  //     public void SetDisplayValue(string value) => DisplayValue = value;
-
-  //     public void SetCalculationExpression(string expression) => CalculationExpression = expression;
-
-  //     public void SetNewOperation(bool value) => IsNewOperation = value;
-
-  //     public void ResetErrorState()
-  //     {
-  //         if (IsInErrorState)
-  //         {
-  //             DisplayValue = "0";
-  //             CalculationExpression = "";
-  //             IsNewOperation = true;
-  //             IsInErrorState = false;
-  //         }
-  //     }
-
-  //     public void SetErrorState()
-  //     {
-  //         DisplayValue = "Error";
-  //         CalculationExpression = "";
-  //         IsNewOperation = true;
-  //         IsInErrorState = true;
-  //     }
-
-  //     public void AddDecimalPoint()
-  //     {
-  //         if (IsNewOperation)
-  //         {
-  //             DisplayValue = "0,";
-  //             IsNewOperation = false;
-  //         }
-  //         else if (!DisplayValue.Contains(","))
-  //         {
-  //             DisplayValue += ",";
-  //         }
-  //     }
-
-  //     public void Backspace()
-  //     {
-  //         if (DisplayValue.Length == 1 || (DisplayValue.Length == 2 && DisplayValue[0] == '-'))
-  //         {
-  //             DisplayValue = "0";
-  //             IsNewOperation = true;
-  //         }
-  //         else
-  //         {
-  //             DisplayValue = DisplayValue[..^1];
-  //         }
-  //     }
-
-  //     public void Clear()
-  //     {
-  //         DisplayValue = "0";
-  //         CalculationExpression = "";
-  //         IsNewOperation = true;
-  //     }
-
-  //     public void ProcessNumber(string number)
-  //     {
-  //         if (IsNewOperation)
-  //         {
-  //             DisplayValue = number;
-  //             IsNewOperation = false;
-  //         }
-  //         else
-  //         {
-  //             if (DisplayValue == "0" && number != ",")
-  //                 DisplayValue = number;
-  //             else
-  //                 DisplayValue += number;
-  //         }
-  //     }
-
-  //     public void ApplyOperator(string op)
-  //     {
-  //         CalculationExpression = $"{DisplayValue} {op}";
-  //         IsNewOperation = true;
-  //     }
-
-  //     public void PerformScientificOperation(string operation, out string oldDisplay, out string oldExpression)
-  //     {
-  //         oldDisplay = DisplayValue;
-  //         oldExpression = CalculationExpression;
-  //         double input;
-
-  //         if (!double.TryParse(DisplayValue, out input))
-  //         {
-  //             throw new ArgumentException("Bad input!");
-  //         }
-
-  //         double result = 0;
-  //         string newExpression = "";
-
-  //         switch (operation)
-  //         {
-  //             case "π":
-  //                 result = Math.PI;
-  //                 newExpression = "π";
-  //                 break;
-  //             case "e":
-  //                 result = Math.E;
-  //                 newExpression = "e";
-  //                 break;
-  //             case "√":
-  //                 if (input < 0)
-  //                     throw new ArgumentException("√ must be processed on n >= 0");
-  //                 result = Math.Sqrt(input);
-  //                 newExpression = $"√({input})";
-  //                 break;
-  //             case "x²":
-  //                 result = Math.Pow(input, 2);
-  //                 newExpression = $"({input})²";
-  //                 break;
-  //             case "ln":
-  //                 if (input <= 0)
-  //                     throw new ArgumentException("ln must be processed with n > 0");
-  //                 result = Math.Log(input);
-  //                 newExpression = $"ln({input})";
-  //                 break;
-  //             default:
-  //                 throw new ArgumentException("Error");
-  //         }
-
-  //         DisplayValue = result.ToString();
-  //         CalculationExpression = newExpression;
-  //         IsNewOperation = true;
-  //     }
-
-  //     public void Calculate(out string oldDisplay, out string oldExpression,
-  //                           out double firstOperand, out double secondOperand, out string op)
-  //     {
-  //         oldDisplay = DisplayValue;
-  //         oldExpression = CalculationExpression;
-
-  //         string[] parts = CalculationExpression.Split(' ');
-
-  //         if (!double.TryParse(parts[0], out firstOperand))
-  //             throw new ArgumentException("something went wrong");
-
-  //         op = parts[1];
-
-  //         if (!double.TryParse(DisplayValue, out secondOperand))
-  //             throw new ArgumentException("something went wrong");
-
-  //         double result = 0;
-
-  //         switch (op)
-  //         {
-  //             case "+":
-  //                 result = firstOperand + secondOperand;
-  //                 break;
-  //             case "-":
-  //                 result = firstOperand - secondOperand;
-  //                 break;
-  //             case "*":
-  //                 result = firstOperand * secondOperand;
-  //                 break;
-  //             case "/":
-  //                 if (secondOperand == 0)
-  //                     throw new DivideByZeroException();
-  //                 result = firstOperand / secondOperand;
-  //                 break;
-  //             default:
-  //                 throw new ArgumentException("something went wrong");
-  //         }
-
-  //         CalculationExpression = $"{CalculationExpression} {DisplayValue} =";
-  //         DisplayValue = result.ToString();
-  //         IsNewOperation = true;
-  //     }
-  // }
-
-  // public interface ICommand
-  // {
-  //     void Execute();
-  //     void Undo();
-  // }
-
-  // public class CommandManager
-  // {
-  //     private readonly Stack<ICommand> undoStack = new Stack<ICommand>();
-  //     private readonly Stack<ICommand> redoStack = new Stack<ICommand>();
-
-  //     public void ExecuteCommand(ICommand command)
-  //     {
-  //         command.Execute();
-  //         undoStack.Push(command);
-  //         redoStack.Clear();
-  //     }
-
-  //     public void Undo()
-  //     {
-  //         if (undoStack.Count > 0)
-  //         {
-  //             ICommand command = undoStack.Pop();
-  //             command.Undo();
-  //             redoStack.Push(command);
-  //         }
-  //     }
-
-  //     public void Redo()
-  //     {
-  //         if (redoStack.Count > 0)
-  //         {
-  //             ICommand command = redoStack.Pop();
-  //             command.Execute();
-  //             undoStack.Push(command);
-  //         }
-  //     }
-  // }
-
-  // public abstract class CalculatorCommand(CalculatorEngine calculator) : ICommand
-  // {
-  //     protected readonly CalculatorEngine calculator = calculator;
-  //     protected string oldDisplayValue = calculator.DisplayValue;
-  //     protected string oldCalculationExpression = calculator.CalculationExpression;
-  //     protected bool oldIsNewOperation = calculator.IsNewOperation;
-
-  //     public abstract void Execute();
-
-  //     public virtual void Undo()
-  //     {
-  //         calculator.SetDisplayValue(oldDisplayValue);
-  //         calculator.SetCalculationExpression(oldCalculationExpression);
-  //         calculator.SetNewOperation(oldIsNewOperation);
-  //     }
-  // }
-
-  // public class InputCommand(CalculatorEngine calculator, string number) : CalculatorCommand(calculator)
-  // {
-  //     private readonly string number = number;
-
-  //     public override void Execute() => calculator.ProcessNumber(number);
-  // }
-
-  // public class DecimalCommand(CalculatorEngine calculator) : CalculatorCommand(calculator)
-  // {
-  //     public override void Execute() => calculator.AddDecimalPoint();
-  // }
-
-  // public class BackspaceCommand(CalculatorEngine calculator) : CalculatorCommand(calculator)
-  // {
-  //     public override void Execute() => calculator.Backspace();
-  // }
-
-  // public class OperatorCommand(CalculatorEngine calculator, string operatorSymbol) : CalculatorCommand(calculator)
-  // {
-  //     private readonly string operatorSymbol = operatorSymbol;
-
-  //     public override void Execute() => calculator.ApplyOperator(operatorSymbol);
-  // }
-
-  // public class CalculateCommand(CalculatorEngine calculator) : CalculatorCommand(calculator)
-  // {
-  //     private double firstOperand;
-  //     private double secondOperand;
-  //     private string operatorSymbol;
-
-  //     public override void Execute() => calculator.Calculate(out _, out _, out firstOperand, out secondOperand, out operatorSymbol);
-  // }
-
-  // public class ScientificCommand(CalculatorEngine calculator, string operation) : CalculatorCommand(calculator)
-  // {
-  //     private readonly string operation = operation;
-
-  //     public override void Execute() => calculator.PerformScientificOperation(operation, out _, out _);
-  // }
-
-  // public class ClearCommand(CalculatorEngine calculator) : CalculatorCommand(calculator)
-  // {
-  //     public override void Execute() => calculator.Clear();
-  // }
 }
