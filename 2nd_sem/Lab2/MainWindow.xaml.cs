@@ -101,7 +101,14 @@ namespace Lab2
     private void Number_Click(object sender, RoutedEventArgs e)
     {
       string number = ((Button)sender).Content.ToString();
-      ProcessNumberInput(number);
+      if (number == "π" || number == "e")
+      {
+        Scientific_Click(sender, e);
+      }
+      else
+      {
+        ProcessNumberInput(number);
+      }
     }
 
     private void Decimal_Click(object sender, RoutedEventArgs e)
@@ -216,7 +223,6 @@ namespace Lab2
         UpdateDisplay();
       }
     }
-
     private void ProcessNumberInput(string number)
     {
       if (calculator.IsInErrorState)

@@ -62,13 +62,26 @@ namespace Lab2
         else
           DisplayValue += number;
       }
+
+      // Check if the number is followed by π or e
+      if (number == "π" || number == "e")
+      {
+        ApplyOperator("*");
+      }
     }
 
     public void ApplyOperator(string op)
     {
+      if (DisplayValue == "π")
+        DisplayValue = Math.PI.ToString();
+      else if (DisplayValue == "e")
+        DisplayValue = Math.E.ToString();
+
       CalculationExpression = $"{DisplayValue} {op}";
       IsNewOperation = true;
     }
+
+
 
     public void PerformScientificOperation(string operation, out string oldDisplay, out string oldExpression)
     {
@@ -120,7 +133,7 @@ namespace Lab2
     }
 
     public void Calculate(out string oldDisplay, out string oldExpression,
-                          out double firstOperand, out double secondOperand, out string op)
+                      out double firstOperand, out double secondOperand, out string op)
     {
       oldDisplay = DisplayValue;
       oldExpression = CalculationExpression;
@@ -128,12 +141,26 @@ namespace Lab2
       string[] parts = CalculationExpression.Split(' ');
 
       if (!double.TryParse(parts[0], out firstOperand))
-        throw new ArgumentException("something went wrong");
+      {
+        if (parts[0] == "π")
+          firstOperand = Math.PI;
+        else if (parts[0] == "e")
+          firstOperand = Math.E;
+        else
+          throw new ArgumentException("something went wrong");
+      }
 
       op = parts[1];
 
       if (!double.TryParse(DisplayValue, out secondOperand))
-        throw new ArgumentException("something went wrong");
+      {
+        if (DisplayValue == "π")
+          secondOperand = Math.PI;
+        else if (DisplayValue == "e")
+          secondOperand = Math.E;
+        else
+          throw new ArgumentException("something went wrong");
+      }
 
       double result = 0;
 
@@ -164,6 +191,7 @@ namespace Lab2
 
 
 
+
     public void ResetErrorState()
     {
       if (IsInErrorState)
@@ -185,4 +213,4 @@ namespace Lab2
 
 
   }
-  }
+}

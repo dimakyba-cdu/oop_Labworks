@@ -4,8 +4,8 @@ namespace Lab2
 {
   public class CommandManager
   {
-    private readonly Stack<ICommand> undoStack = new Stack<ICommand>();
-    private readonly Stack<ICommand> redoStack = new Stack<ICommand>();
+    private Stack<ICommand> undoStack = new Stack<ICommand>();
+    private Stack<ICommand> redoStack = new Stack<ICommand>();
 
     public void ExecuteCommand(ICommand command)
     {

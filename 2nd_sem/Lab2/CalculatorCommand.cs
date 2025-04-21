@@ -2,7 +2,7 @@ namespace Lab2
 {
   public abstract class CalculatorCommand(CalculatorEngine calculator) : ICommand
   {
-    protected readonly CalculatorEngine calculator = calculator;
+    protected CalculatorEngine calculator = calculator;
     protected string oldDisplayValue = calculator.DisplayValue;
     protected string oldCalculationExpression = calculator.CalculationExpression;
     protected bool oldIsNewOperation = calculator.IsNewOperation;

@@ -4,6 +4,6 @@ namespace Lab2
   {
     private readonly string operatorSymbol = operatorSymbol;
 
-    public override void Execute() => calculator.ApplyOperator(operatorSymbol);
+        public override void Execute() { calculator.ApplyOperator(operatorSymbol); }
   }
 }
