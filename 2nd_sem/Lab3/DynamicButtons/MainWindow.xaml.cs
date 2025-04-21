@@ -82,12 +82,6 @@ public partial class MainWindow : Window
 
             btn.Click += (sender, args) =>
             {
-                if (number < 1)
-                {
-                    MessageBox.Show($"Number {number} is less than 1 and will not be evaluated.");
-                    return;
-                }
-
                 if (!clickStates.TryGetValue(number, out var state))
                 {
                     string result = CheckPrimeOrComposite(number);
@@ -115,9 +109,9 @@ public partial class MainWindow : Window
         for (int i = 2; i <= Math.Sqrt(n); i++)
         {
             if (n % i == 0)
-                return $"Number {n} is composite because it is divisible by {i}.";
+                return $"number {n} is composite because it is divisible by {i}";
         }
 
-        return $"Number {n} is prime.";
+        return $"number {n} is prime";
     }
 }
