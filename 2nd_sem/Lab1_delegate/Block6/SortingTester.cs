@@ -1,97 +1,76 @@
+using System;
 using System.Diagnostics;
+using System.Linq;
 
 public static class SortingTester
 {
-  public delegate void TestedMethod(int[] array);
+  private static readonly string _folderPath = "TestArrays";
+  public delegate void SortMethod(int[] array);
+  public delegate bool TimeVerifier(long etalonTime, long studentTime);
 
-  public static bool TestSorting(TestedMethod etalonMethod, TestedMethod studentMethod, int[] array, out long studentTime)
+  public static bool TestSorting(SortMethod etalon, SortMethod student, int[] input, out long studentTime, TimeVerifier timeVerifier = null)
   {
-    int[] etalonArray = (int[])array.Clone();
-    int[] studentArray = (int[])array.Clone();
+    int[] etalonCopy = (int[])input.Clone();
+    int[] studentCopy = (int[])input.Clone();
 
-    Stopwatch stopwatch = new Stopwatch();
+    long etalonTime = MeasureTime(etalon, etalonCopy);
+    studentTime = MeasureTime(student, studentCopy);
 
-    stopwatch.Start();
-    etalonMethod(etalonArray);
-    stopwatch.Stop();
-    long etalonTime = stopwatch.ElapsedMilliseconds;
+    bool correct = etalonCopy.SequenceEqual(studentCopy);
 
-    stopwatch.Reset();
-    stopwatch.Start();
-    try
+    if (timeVerifier == null)
     {
-      studentMethod(studentArray);
+      timeVerifier = (et, st) => st <= et * 2 + 50;
     }
-    catch (Exception)
-    {
-      Console.WriteLine("Student method crashed.");
-      studentTime = 0;
-      return false;
-    }
-    stopwatch.Stop();
-    studentTime = stopwatch.ElapsedMilliseconds;
 
-    bool isCorrect = etalonArray.SequenceEqual(studentArray);
-    bool isTimeComparable = Math.Max(0, etalonTime / 5 - 200) <= studentTime && studentTime <= 5 * etalonTime + 200;
-
-    return isCorrect && isTimeComparable;
+    return correct && timeVerifier(etalonTime, studentTime);
   }
 
-  public static void AllTests(string folderPath, TestedMethod etalonMethod, TestedMethod studentMethod, string sortName)
+  private static long MeasureTime(SortMethod method, int[] array)
   {
-    string[] testCaseFiles = Directory.EnumerateFiles(folderPath, "*.txt").ToArray();
-    int passedTests = 0;
-
-    for (int i = 0; i < testCaseFiles.Length; i++)
+    Stopwatch sw = new Stopwatch();
+    sw.Start();
+    try
     {
-      string filePath = testCaseFiles[i];
-      if (File.Exists(filePath))
+      method(array);
+    }
+    catch { return long.MaxValue; }
+    sw.Stop();
+    return sw.ElapsedMilliseconds;
+  }
+
+  public static void VerifyMethod(SortMethod etalon, SortMethod student)
+  {
+    TimeVerifier timeVerifier = (etalonTime, studentTime) => studentTime < (etalonTime * 1.5);
+
+    string[] files = Directory.GetFiles(_folderPath, "*.txt");
+    int passed = 0;
+
+
+    for (int i = 0; i < files.Length; i++)
+    {
+      string content = File.ReadAllText(files[i]);
+      int[] input = content.Split(' ', StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
+
+      Console.WriteLine($"\n--- Тест #{i + 1} ---");
+
+      bool result = TestSorting(etalon, student, input, out long studentTime, timeVerifier);
+
+      if (result)
       {
-        int[] testArray = File.ReadAllText(filePath)
-                              .Split(' ', StringSplitOptions.RemoveEmptyEntries)
-                              .Select(int.Parse)
-                              .ToArray();
-
-        Console.WriteLine($"\n--- TestCase #{i + 1} ---");
-
-        try
-        {
-          bool result = TestSorting(etalonMethod, studentMethod, testArray, out long studentTime);
-          if (result)
-          {
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($"OK  - Elapsed time: {studentTime} ms");
-            Console.ResetColor();
-            passedTests++;
-          }
-          else
-          {
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("WA");
-            Console.ResetColor();
-          }
-        }
-        catch (TimeoutException)
-        {
-          Console.ForegroundColor = ConsoleColor.Red;
-          Console.WriteLine("TL");
-          Console.ResetColor();
-        }
-        catch (Exception ex)
-        {
-          Console.ForegroundColor = ConsoleColor.Red;
-          Console.WriteLine($"CE: {ex.Message} ");
-          Console.ResetColor();
-        }
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine($"OK  | Час: {studentTime} мс");
+        passed++;
       }
       else
       {
-        Console.WriteLine($"Test case file #{i + 1} not found.");
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine($"WA | Час: {studentTime} мс");
       }
+      Console.ResetColor();
     }
 
-    int totalTests = testCaseFiles.Length;
-    int score = (int)Math.Round((double)passedTests / totalTests * 100);
-    Console.WriteLine($"\nScore: {score}/100");
+    int score = (int)Math.Round((double)passed / files.Length * 100);
+    Console.WriteLine($"\nПідсумок: {score}/100");
   }
 }
