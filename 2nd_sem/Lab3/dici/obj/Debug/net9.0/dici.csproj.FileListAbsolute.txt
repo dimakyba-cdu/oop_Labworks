@@ -1,0 +1,15 @@
+D:\Desktop\uni\2kurs\oop_labworks\2nd_sem\Lab3\dici\bin\Debug\net9.0\dici.exe
+D:\Desktop\uni\2kurs\oop_labworks\2nd_sem\Lab3\dici\bin\Debug\net9.0\dici.deps.json
+D:\Desktop\uni\2kurs\oop_labworks\2nd_sem\Lab3\dici\bin\Debug\net9.0\dici.runtimeconfig.json
+D:\Desktop\uni\2kurs\oop_labworks\2nd_sem\Lab3\dici\bin\Debug\net9.0\dici.dll
+D:\Desktop\uni\2kurs\oop_labworks\2nd_sem\Lab3\dici\bin\Debug\net9.0\dici.pdb
+D:\Desktop\uni\2kurs\oop_labworks\2nd_sem\Lab3\dici\obj\Debug\net9.0\dici.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desktop\uni\2kurs\oop_labworks\2nd_sem\Lab3\dici\obj\Debug\net9.0\dici.AssemblyInfoInputs.cache
+D:\Desktop\uni\2kurs\oop_labworks\2nd_sem\Lab3\dici\obj\Debug\net9.0\dici.AssemblyInfo.cs
+D:\Desktop\uni\2kurs\oop_labworks\2nd_sem\Lab3\dici\obj\Debug\net9.0\dici.csproj.CoreCompileInputs.cache
+D:\Desktop\uni\2kurs\oop_labworks\2nd_sem\Lab3\dici\obj\Debug\net9.0\dici.sourcelink.json
+D:\Desktop\uni\2kurs\oop_labworks\2nd_sem\Lab3\dici\obj\Debug\net9.0\dici.dll
+D:\Desktop\uni\2kurs\oop_labworks\2nd_sem\Lab3\dici\obj\Debug\net9.0\refint\dici.dll
+D:\Desktop\uni\2kurs\oop_labworks\2nd_sem\Lab3\dici\obj\Debug\net9.0\dici.pdb
+D:\Desktop\uni\2kurs\oop_labworks\2nd_sem\Lab3\dici\obj\Debug\net9.0\dici.genruntimeconfig.cache
+D:\Desktop\uni\2kurs\oop_labworks\2nd_sem\Lab3\dici\obj\Debug\net9.0\ref\dici.dll

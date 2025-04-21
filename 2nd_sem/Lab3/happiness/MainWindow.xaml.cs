@@ -33,9 +33,16 @@ public partial class MainWindow : Window
 
     private void NoButton_Click(object sender, RoutedEventArgs e)
     {
-        MessageBox.Show("thank you for your respond", "title",
+        MessageBox.Show("i hate your approach to life.", "wrong answer",
+            MessageBoxButton.OK, MessageBoxImage.Warning);
+    }
+
+    private void YesButton_Click(object sender, RoutedEventArgs e)
+    {
+        MessageBox.Show("i respect your lust for life.", "right answer",
             MessageBoxButton.OK, MessageBoxImage.Information);
     }
+
 
     private void Window_KeyDown(object sender, KeyEventArgs e)
     {
