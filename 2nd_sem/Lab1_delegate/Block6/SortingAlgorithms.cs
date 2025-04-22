@@ -55,7 +55,7 @@ public static class SortingAlgorithms
         if (array[i] > array[i + 1])
           (array[i], array[i + 1]) = (array[i + 1], array[i]);
 
-      right-=2;
+      right -= 2;
 
       for (int i = right; i > left; i--)
         if (array[i] < array[i - 1])

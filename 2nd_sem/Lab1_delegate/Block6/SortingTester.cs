@@ -1,5 +1,6 @@
 using System;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 
 public static class SortingTester
@@ -8,7 +9,11 @@ public static class SortingTester
   public delegate void SortMethod(int[] array);
   public delegate bool TimeVerifier(long etalonTime, long studentTime);
 
-  public static bool TestSorting(SortMethod etalon, SortMethod student, int[] input, out long studentTime, TimeVerifier timeVerifier = null)
+  // тайм-ліміт не повільніше ніж у 2 рази + 50 мс
+  private static readonly TimeVerifier _defaultTimeVerifier = (etalonTime, studentTime) =>
+    studentTime <= etalonTime * 2 + 50;
+
+  public static bool TestSorting(SortMethod etalon, SortMethod student, int[] input, out long studentTime, out bool timeLimitExceeded)
   {
     int[] etalonCopy = (int[])input.Clone();
     int[] studentCopy = (int[])input.Clone();
@@ -17,13 +22,9 @@ public static class SortingTester
     studentTime = MeasureTime(student, studentCopy);
 
     bool correct = etalonCopy.SequenceEqual(studentCopy);
+    timeLimitExceeded = !_defaultTimeVerifier(etalonTime, studentTime);
 
-    if (timeVerifier == null)
-    {
-      timeVerifier = (et, st) => st <= et * 2 + 50;
-    }
-
-    return correct && timeVerifier(etalonTime, studentTime);
+    return correct && !timeLimitExceeded;
   }
 
   private static long MeasureTime(SortMethod method, int[] array)
@@ -34,18 +35,18 @@ public static class SortingTester
     {
       method(array);
     }
-    catch { return long.MaxValue; }
+    catch
+    {
+      return long.MaxValue;
+    }
     sw.Stop();
     return sw.ElapsedMilliseconds;
   }
 
   public static void VerifyMethod(SortMethod etalon, SortMethod student)
   {
-    TimeVerifier timeVerifier = (etalonTime, studentTime) => studentTime < (etalonTime * 1.5);
-
     string[] files = Directory.GetFiles(_folderPath, "*.txt");
     int passed = 0;
-
 
     for (int i = 0; i < files.Length; i++)
     {
@@ -54,7 +55,7 @@ public static class SortingTester
 
       Console.WriteLine($"\n--- Тест #{i + 1} ---");
 
-      bool result = TestSorting(etalon, student, input, out long studentTime, timeVerifier);
+      bool result = TestSorting(etalon, student, input, out long studentTime, out bool timeLimitExceeded);
 
       if (result)
       {
@@ -62,11 +63,24 @@ public static class SortingTester
         Console.WriteLine($"OK  | Час: {studentTime} мс");
         passed++;
       }
+      else if (studentTime == long.MaxValue)
+      {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine($"CE | Час: {studentTime} мс");
+      }
+      else if (timeLimitExceeded)
+      {
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine($"TL | Перевищено час: {studentTime} мс");
+      }
+
+
       else
       {
         Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine($"WA | Час: {studentTime} мс");
       }
+
       Console.ResetColor();
     }
 
