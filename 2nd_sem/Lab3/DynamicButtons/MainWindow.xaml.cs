@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -9,7 +7,6 @@ namespace DynamicButtons;
 
 public partial class MainWindow : Window
 {
-    private readonly Dictionary<int, (bool isClicked, string result)> clickStates = new();
     public MainWindow()
     {
         InitializeComponent();
@@ -77,20 +74,24 @@ public partial class MainWindow : Window
                 Margin = new Thickness(5),
                 Padding = new Thickness(5, 2, 5, 2),
                 MinWidth = 30,
-                HorizontalAlignment = HorizontalAlignment.Left
+                HorizontalAlignment = HorizontalAlignment.Left,
+                Tag = null
             };
 
             btn.Click += (sender, args) =>
             {
-                if (!clickStates.TryGetValue(number, out var state))
+                Button clickedButton = sender as Button;
+                if (clickedButton == null) return;
+
+                if (clickedButton.Tag is string result)
                 {
-                    string result = CheckPrimeOrComposite(number);
-                    clickStates[number] = (true, result);
-                    MessageBox.Show(result);
+                    MessageBox.Show($"stop clicking bro\n{result}");
                 }
                 else
                 {
-                    MessageBox.Show($"stop clicking bro\n{state.result}");
+                    string newResult = CheckPrimeOrComposite(number);
+                    clickedButton.Tag = newResult;
+                    MessageBox.Show(newResult);
                 }
             };
 
@@ -102,9 +103,6 @@ public partial class MainWindow : Window
     {
         if (n <= 1)
             return $"number {n} is neither prime nor composite.";
-
-        // if (n == 1)
-        //     return "Number 1 is neither prime nor composite.";
 
         for (int i = 2; i <= Math.Sqrt(n); i++)
         {
