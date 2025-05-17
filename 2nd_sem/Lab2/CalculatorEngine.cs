@@ -57,6 +57,10 @@ namespace Lab2
       }
       else
       {
+        string currentValue = DisplayValue.Replace(",", "").Replace("-", "");
+        if (currentValue.Length >= 24)
+          return;
+
         if (DisplayValue == "0" && number != ",")
           DisplayValue = number;
         else
