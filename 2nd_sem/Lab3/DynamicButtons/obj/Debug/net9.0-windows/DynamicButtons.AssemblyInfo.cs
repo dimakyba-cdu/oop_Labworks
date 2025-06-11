@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DynamicButtons")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ecb12e13d9b8538087f17bd7d4d9240b06947c6d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+98556cceabedc429f0aaf1f0bd14b523f3a04544")]
 [assembly: System.Reflection.AssemblyProductAttribute("DynamicButtons")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DynamicButtons")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

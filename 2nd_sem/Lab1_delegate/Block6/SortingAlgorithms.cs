@@ -34,7 +34,6 @@ public static class SortingAlgorithms
 
   public static void StudentSelectionSort(int[] array)
   {
-    // Проста реалізація з додатковою затримкою
     for (int i = 0; i < array.Length - 1; i++)
     {
       int min = i;

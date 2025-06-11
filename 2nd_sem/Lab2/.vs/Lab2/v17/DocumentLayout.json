@@ -1,34 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Desktop\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\",
+  "WorkspaceRootPath": "D:\\Desktop\\\u041F\u0423\u0417\u041E\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1B00A159-F0B3-75BC-79AF-57F45C378AF5}|Lab2.csproj|d:\\desktop\\uni\\2kurs\\oop_labworks\\2nd_sem\\lab2\\classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|",
-      "RelativeMoniker": "D:0:0:{1B00A159-F0B3-75BC-79AF-57F45C378AF5}|Lab2.csproj|solutionrelative:classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Desktop\\\u041F\u0423\u0417\u041E\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\CalculatorEngine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CalculatorEngine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1B00A159-F0B3-75BC-79AF-57F45C378AF5}|Lab2.csproj|d:\\desktop\\uni\\2kurs\\oop_labworks\\2nd_sem\\lab2\\calculatorcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B00A159-F0B3-75BC-79AF-57F45C378AF5}|Lab2.csproj|solutionrelative:calculatorcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Desktop\\\u041F\u0423\u0417\u041E\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\CommandManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CommandManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1B00A159-F0B3-75BC-79AF-57F45C378AF5}|Lab2.csproj|d:\\desktop\\uni\\2kurs\\oop_labworks\\2nd_sem\\lab2\\calculatorengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B00A159-F0B3-75BC-79AF-57F45C378AF5}|Lab2.csproj|solutionrelative:calculatorengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Desktop\\\u041F\u0423\u0417\u041E\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\CalculatorCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CalculatorCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1B00A159-F0B3-75BC-79AF-57F45C378AF5}|Lab2.csproj|d:\\desktop\\uni\\2kurs\\oop_labworks\\2nd_sem\\lab2\\clearcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B00A159-F0B3-75BC-79AF-57F45C378AF5}|Lab2.csproj|solutionrelative:clearcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Desktop\\\u041F\u0423\u0417\u041E\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1B00A159-F0B3-75BC-79AF-57F45C378AF5}|Lab2.csproj|d:\\desktop\\uni\\2kurs\\oop_labworks\\2nd_sem\\lab2\\commandmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B00A159-F0B3-75BC-79AF-57F45C378AF5}|Lab2.csproj|solutionrelative:commandmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Desktop\\\u041F\u0423\u0417\u041E\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\MainWindow.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MainWindow.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1B00A159-F0B3-75BC-79AF-57F45C378AF5}|Lab2.csproj|d:\\desktop\\uni\\2kurs\\oop_labworks\\2nd_sem\\lab2\\decimalcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B00A159-F0B3-75BC-79AF-57F45C378AF5}|Lab2.csproj|solutionrelative:decimalcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Desktop\\\u041F\u0423\u0417\u041E\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\BackspaceCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BackspaceCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1B00A159-F0B3-75BC-79AF-57F45C378AF5}|Lab2.csproj|d:\\desktop\\uni\\2kurs\\oop_labworks\\2nd_sem\\lab2\\icomand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B00A159-F0B3-75BC-79AF-57F45C378AF5}|Lab2.csproj|solutionrelative:icomand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Desktop\\\u041F\u0423\u0417\u041E\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\CalculateCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CalculateCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Desktop\\\u041F\u0423\u0417\u041E\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\ClassDiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ClassDiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,101 +42,108 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ClassDiagram1.cd",
-              "DocumentMoniker": "D:\\Desktop\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\ClassDiagram1.cd",
-              "RelativeDocumentMoniker": "ClassDiagram1.cd",
-              "ToolTip": "D:\\Desktop\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\ClassDiagram1.cd",
-              "RelativeToolTip": "ClassDiagram1.cd",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000463|",
-              "WhenOpened": "2025-04-10T07:14:16.109Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CalculatorCommand.cs",
-              "DocumentMoniker": "D:\\Desktop\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\CalculatorCommand.cs",
-              "RelativeDocumentMoniker": "CalculatorCommand.cs",
-              "ToolTip": "D:\\Desktop\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\CalculatorCommand.cs",
-              "RelativeToolTip": "CalculatorCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T06:53:41.402Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CalculatorEngine.cs",
-              "DocumentMoniker": "D:\\Desktop\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\CalculatorEngine.cs",
-              "RelativeDocumentMoniker": "CalculatorEngine.cs",
-              "ToolTip": "D:\\Desktop\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\CalculatorEngine.cs",
-              "RelativeToolTip": "CalculatorEngine.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T06:53:40.072Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DecimalCommand.cs",
-              "DocumentMoniker": "D:\\Desktop\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\DecimalCommand.cs",
-              "RelativeDocumentMoniker": "DecimalCommand.cs",
-              "ToolTip": "D:\\Desktop\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\DecimalCommand.cs",
-              "RelativeToolTip": "DecimalCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T06:53:37.168Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ClearCommand.cs",
-              "DocumentMoniker": "D:\\Desktop\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\ClearCommand.cs",
-              "RelativeDocumentMoniker": "ClearCommand.cs",
-              "ToolTip": "D:\\Desktop\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\ClearCommand.cs",
-              "RelativeToolTip": "ClearCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\Desktop\\\u041F\u0423\u0417\u041E\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "D:\\Desktop\\\u041F\u0423\u0417\u041E\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAAAIcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T06:53:33.319Z",
+              "WhenOpened": "2025-05-29T09:00:48.386Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\Desktop\\\u041F\u0423\u0417\u041E\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "D:\\Desktop\\\u041F\u0423\u0417\u041E\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-29T09:00:47.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CalculatorEngine.cs",
+              "DocumentMoniker": "D:\\Desktop\\\u041F\u0423\u0417\u041E\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\CalculatorEngine.cs",
+              "RelativeDocumentMoniker": "CalculatorEngine.cs",
+              "ToolTip": "D:\\Desktop\\\u041F\u0423\u0417\u041E\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\CalculatorEngine.cs",
+              "RelativeToolTip": "CalculatorEngine.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T09:00:42.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "CommandManager.cs",
-              "DocumentMoniker": "D:\\Desktop\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\CommandManager.cs",
+              "DocumentMoniker": "D:\\Desktop\\\u041F\u0423\u0417\u041E\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\CommandManager.cs",
               "RelativeDocumentMoniker": "CommandManager.cs",
-              "ToolTip": "D:\\Desktop\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\CommandManager.cs",
+              "ToolTip": "D:\\Desktop\\\u041F\u0423\u0417\u041E\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\CommandManager.cs",
               "RelativeToolTip": "CommandManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T06:53:30.288Z",
+              "WhenOpened": "2025-05-29T09:00:40.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CalculatorCommand.cs",
+              "DocumentMoniker": "D:\\Desktop\\\u041F\u0423\u0417\u041E\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\CalculatorCommand.cs",
+              "RelativeDocumentMoniker": "CalculatorCommand.cs",
+              "ToolTip": "D:\\Desktop\\\u041F\u0423\u0417\u041E\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\CalculatorCommand.cs",
+              "RelativeToolTip": "CalculatorCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T07:14:51.024Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "IComand.cs",
-              "DocumentMoniker": "D:\\Desktop\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\IComand.cs",
-              "RelativeDocumentMoniker": "IComand.cs",
-              "ToolTip": "D:\\Desktop\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\IComand.cs",
-              "RelativeToolTip": "IComand.cs",
+              "Title": "CalculateCommand.cs",
+              "DocumentMoniker": "D:\\Desktop\\\u041F\u0423\u0417\u041E\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\CalculateCommand.cs",
+              "RelativeDocumentMoniker": "CalculateCommand.cs",
+              "ToolTip": "D:\\Desktop\\\u041F\u0423\u0417\u041E\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\CalculateCommand.cs",
+              "RelativeToolTip": "CalculateCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T06:52:19.482Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-17T07:14:46.029Z"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ClassDiagram1.cd",
+              "DocumentMoniker": "D:\\Desktop\\\u041F\u0423\u0417\u041E\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\ClassDiagram1.cd",
+              "RelativeDocumentMoniker": "ClassDiagram1.cd",
+              "ToolTip": "D:\\Desktop\\\u041F\u0423\u0417\u041E\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\ClassDiagram1.cd",
+              "RelativeToolTip": "ClassDiagram1.cd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000463|",
+              "WhenOpened": "2025-04-24T08:40:06.922Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BackspaceCommand.cs",
+              "DocumentMoniker": "D:\\Desktop\\\u041F\u0423\u0417\u041E\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\BackspaceCommand.cs",
+              "RelativeDocumentMoniker": "BackspaceCommand.cs",
+              "ToolTip": "D:\\Desktop\\\u041F\u0423\u0417\u041E\\uni\\2kurs\\oop_labworks\\2nd_sem\\Lab2\\BackspaceCommand.cs",
+              "RelativeToolTip": "BackspaceCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T18:41:12.355Z",
+              "EditorCaption": ""
             }
           ]
         }

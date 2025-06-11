@@ -25,10 +25,10 @@ public class Program
           GenerateNewData(folderPath);
           break;
         case "2":
-          TestTestedMethod(folderPath, SortingAlgorithms.SelectionSort, SortingAlgorithms.StudentSelectionSort, "Selection Sort");
+          VerifyMethod(folderPath, SortingAlgorithms.SelectionSort, SortingAlgorithms.StudentSelectionSort, "Selection Sort");
           break;
         case "3":
-          TestTestedMethod(folderPath, SortingAlgorithms.ShakerSort, SortingAlgorithms.StudentShakerSort, "Shaker Sort");
+          VerifyMethod(folderPath, SortingAlgorithms.ShakerSort, SortingAlgorithms.StudentShakerSort, "Shaker Sort");
           break;
         case "4":
           return;
@@ -71,7 +71,7 @@ public class Program
     }
   }
 
-  private static void TestTestedMethod(string folderPath, SortingTester.TestedMethod etalonMethod, SortingTester.TestedMethod studentMethod, string sortName)
+  private static void VerifyMethod(string folderPath, SortingTester.TestedMethod etalonMethod, SortingTester.TestedMethod studentMethod, string sortName)
   {
     string[] testCaseFiles = Directory.EnumerateFiles(folderPath, "*.txt").ToArray();
     int passedTests = 0;

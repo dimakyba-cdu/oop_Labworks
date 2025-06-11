@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -7,6 +8,8 @@ namespace DynamicButtons;
 
 public partial class MainWindow : Window
 {
+    private ObservableCollection<ButtonModel> ButtonModels = new();
+
     public MainWindow()
     {
         InitializeComponent();
@@ -51,14 +54,16 @@ public partial class MainWindow : Window
             return;
         }
 
-        var toRemove = ButtonsPanel.Children
-            .OfType<Button>()
-            .Where(b => int.TryParse(b.Content.ToString(), out int value) && value % multiple == 0)
-            .ToList();
+        var toRemove = ButtonModels.Where(b => b.Number % multiple == 0).ToList();
 
-        foreach (var btn in toRemove)
+        foreach (var model in toRemove)
         {
-            ButtonsPanel.Children.Remove(btn);
+            ButtonModels.Remove(model);
+            var buttonToRemove = ButtonsPanel.Children
+                .OfType<Button>()
+                .FirstOrDefault(b => int.TryParse(b.Content.ToString(), out int val) && val == model.Number);
+            if (buttonToRemove != null)
+                ButtonsPanel.Children.Remove(buttonToRemove);
         }
     }
 
@@ -66,32 +71,28 @@ public partial class MainWindow : Window
     {
         for (int i = from; step > 0 ? i <= to : i >= to; i += step)
         {
-            int number = i;
+            var model = new ButtonModel { Number = i };
+            ButtonModels.Add(model);
 
             Button btn = new Button
             {
-                Content = number.ToString(),
+                Content = model.Number.ToString(),
                 Margin = new Thickness(5),
                 Padding = new Thickness(5, 2, 5, 2),
                 MinWidth = 30,
-                HorizontalAlignment = HorizontalAlignment.Left,
-                Tag = null
+                HorizontalAlignment = HorizontalAlignment.Left
             };
 
             btn.Click += (sender, args) =>
             {
-                Button clickedButton = sender as Button;
-                if (clickedButton == null) return;
-
-                if (clickedButton.Tag is string result)
+                if (!string.IsNullOrEmpty(model.PrimeStatus))
                 {
-                    MessageBox.Show($"stop clicking bro\n{result}");
+                    MessageBox.Show($"stop clicking bro\n{model.PrimeStatus}");
                 }
                 else
                 {
-                    string newResult = CheckPrimeOrComposite(number);
-                    clickedButton.Tag = newResult;
-                    MessageBox.Show(newResult);
+                    model.PrimeStatus = CheckPrimeOrComposite(model.Number);
+                    MessageBox.Show(model.PrimeStatus);
                 }
             };
 
@@ -112,4 +113,10 @@ public partial class MainWindow : Window
 
         return $"number {n} is prime";
     }
+}
+
+public class ButtonModel
+{
+    public int Number { get; set; }
+    public string PrimeStatus { get; set; } = string.Empty;
 }
