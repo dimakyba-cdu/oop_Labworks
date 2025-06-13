@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Desktop\\nato-otan\\Lab5\\Block1\\Block1.csproj",
+      "projectUniqueName": "D:\\Desktop\\Block1\\Block1.csproj",
       "projectName": "Block1",
-      "projectPath": "D:\\Desktop\\nato-otan\\Lab5\\Block1\\Block1.csproj",
+      "projectPath": "D:\\Desktop\\Block1\\Block1.csproj",
       "packagesPath": "C:\\Users\\userr\\.nuget\\packages\\",
-      "outputPath": "D:\\Desktop\\nato-otan\\Lab5\\Block1\\obj\\",
+      "outputPath": "D:\\Desktop\\Block1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
