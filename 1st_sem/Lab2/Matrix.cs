@@ -1,102 +1,102 @@
-using System.Text;
+  using System.Text;
 
-namespace Lab2
-{
-  public partial class Matrix
+  namespace Lab2
   {
-    private double[,] data;
-    private double det = double.NaN;
-    public Matrix(double[,] arr) => data = (double[,])arr.Clone();
-    public Matrix(double[][] arr)
+    public partial class Matrix
     {
-      if (arr == null || arr.Length == 0 || arr[0] == null)
-        throw new ArgumentException("no array");
-
-      for (int i = 0; i < arr.Length; i++)
+      private double[,] data;
+      private double det = double.NaN;
+      public Matrix(double[,] arr) => data = (double[,])arr.Clone();
+      public Matrix(double[][] arr)
       {
-        if (arr[i].Length != arr[0].Length)
-          throw new ArgumentException("non-rectangular jagged array");
-      }
+        if (arr == null || arr.Length == 0 || arr[0] == null)
+          throw new ArgumentException("no array");
 
-      int rows = arr.Length;
-      int cols = arr[0].Length;
-
-      data = new double[rows, cols];
-      for (int i = 0; i < rows; i++)
-        Array.Copy(arr[i], 0, data, i * cols, cols);
-    }
-    public Matrix(string[] arr)
-    {
-      if (arr == null || arr.Length == 0)
-        throw new ArgumentException("no array");
-
-      var rows = arr.Length;
-      var values = arr.Select(row => row.Split(new[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries)).ToArray();
-
-      for (int i = 1; i < rows; i++)
-        if (values[i].Length != values[0].Length)
-          throw new ArgumentException("non-rectangular matrix");
-
-      var cols = values[0].Length;
-
-      data = new double[rows, cols];
-      for (int i = 0; i < rows; i++)
-      {
-        for (int j = 0; j < cols; j++)
-          if (!double.TryParse(values[i][j], out data[i, j]))
-            throw new ArgumentException("non-numeric value");
-      }
-    }
-    public Matrix(string str) : this(str.Split('\n', StringSplitOptions.RemoveEmptyEntries)) { }
-    public Matrix(Matrix m) : this(m.data) { }
-    public int Height
-    {
-      get { return data.GetLength(0); }
-    }
-    public int Width
-    {
-      get { return data.GetLength(1); }
-    }
-    public int GetHeight() => Height;
-    public int GetWidth() => Width;
-
-    public double this[int i, int j]
-    {
-      get
-      {
-        if (i >= 0 && i < Height)
-          if (j >= 0 && j < Width)
-            return data[i, j];
-        return 0;
-      }
-      set
-      {
-        if (i >= 0 && i < Height && j >= 0 && j < Width)
+        for (int i = 0; i < arr.Length; i++)
         {
-          data[i, j] = value;
-          det = double.NaN;
+          if (arr[i].Length != arr[0].Length)
+            throw new ArgumentException("non-rectangular jagged array");
+        }
+
+        int rows = arr.Length;
+        int cols = arr[0].Length;
+
+        data = new double[rows, cols];
+        for (int i = 0; i < rows; i++)
+          Array.Copy(arr[i], 0, data, i * cols, cols);
+      }
+      public Matrix(string[] arr)
+      {
+        if (arr == null || arr.Length == 0)
+          throw new ArgumentException("no array");
+
+        var rows = arr.Length;
+        var values = arr.Select(row => row.Split(new[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries)).ToArray();
+
+        for (int i = 1; i < rows; i++)
+          if (values[i].Length != values[0].Length)
+            throw new ArgumentException("non-rectangular matrix");
+
+        var cols = values[0].Length;
+
+        data = new double[rows, cols];
+        for (int i = 0; i < rows; i++)
+        {
+          for (int j = 0; j < cols; j++)
+            if (!double.TryParse(values[i][j], out data[i, j]))
+              throw new ArgumentException("non-numeric value");
         }
       }
-    }
-    public double GetElement(int i, int j)
-    {
-      return this[i, j];
-    }
-    public void SetElement(int i, int j, double value)
-    {
-      this[i, j] = value;
-    }
-    public override string ToString()
-    {
-      StringBuilder result = new StringBuilder("");
-      for (int i = 0; i < Height; i++)
+      public Matrix(string str) : this(str.Split('\n', StringSplitOptions.RemoveEmptyEntries)) { }
+      public Matrix(Matrix m) : this(m.data) { }
+      public int Height
       {
-        for (var j = 0; j < Width; j++)
-          result.Append($"{this[i, j],3:F0} ");
-        result.Append("\n");
+        get { return data.GetLength(0); }
       }
-      return result.ToString();
-    }
-  }
+      public int Width
+      {
+        get { return data.GetLength(1); }
+      }
+      public int GetHeight() => Height;
+      public int GetWidth() => Width;
 
-}
+      public double this[int i, int j]
+      {
+        get
+        {
+          if (i >= 0 && i < Height)
+            if (j >= 0 && j < Width)
+              return data[i, j];
+          return 0;
+        }
+        set
+        {
+          if (i >= 0 && i < Height && j >= 0 && j < Width)
+          {
+            data[i, j] = value;
+            det = double.NaN;
+          }
+        }
+      }
+      public double GetElement(int i, int j)
+      {
+        return this[i, j];
+      }
+      public void SetElement(int i, int j, double value)
+      {
+        this[i, j] = value;
+      }
+      public override string ToString()
+      {
+        StringBuilder result = new StringBuilder("");
+        for (int i = 0; i < Height; i++)
+        {
+          for (int j = 0; j < Width; j++)
+            result.Append($"{this[i, j],3:F0} ");
+          result.Append("\n");
+        }
+        return result.ToString();
+      }
+    }
+
+  }

@@ -19,7 +19,7 @@
             {1, 7, 2, 4},
             {3, 1, 8, 2},
             {2, 4, 1, 6}
-        });
+          });
 
           Matrix b = new Matrix("5 2\n 3 1\n6 4\n 2 5");
 
@@ -70,6 +70,7 @@
           MyFrac f1 = new MyFrac(1, 2);
           MyFrac f2 = new MyFrac(3, 4);
           MyFrac f3 = new MyFrac(-5, 6);
+          f3.Denominator = -5;
 
           Console.WriteLine($"f1: {f1}");
           Console.WriteLine($"f2: {f2}");

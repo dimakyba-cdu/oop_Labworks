@@ -42,7 +42,6 @@ namespace Lab2
     public void TransponeMe()
     {
       data = GetTransponedArray();
-      det = double.NaN;
     }
 
     public double CalcDeterminant()
